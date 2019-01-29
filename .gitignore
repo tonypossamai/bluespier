@@ -53,5 +53,5 @@ themes/*
 
 # Ignore packages #
 # =============== #
-# themes/SoBold/node_modules/
+themes/SoBold/node_modules/
 
