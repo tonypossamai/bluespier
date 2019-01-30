@@ -982,3 +982,57 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+
+/* Main styling for the About Theatre Management Page */
+
+.p-header {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	overflow: hidden;
+	height: 500px;
+	box-shadow: 0 0 25px rgba(0,0,0,0.2);
+}
+
+.p-header .overlay-blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+	height: 300px;
+	background-color: #447cab;
+    opacity: 0.9;
+    z-index: 1;
+}
+.p-header .overlay-blue-shape {
+    position: absolute;
+    bottom: 0;
+    right: -475px;
+    width: 1050px;
+    height: 390px;
+    background: url(/themes/SoBold/images/logo-overlay-header.png) no-repeat;
+    background-position: top;
+    background-size: 1050px auto;
+    opacity: 0.02;
+    z-index: 2;
+}
+.p-header>* {
+    position: relative;
+    z-index: 4;
+}
+
+.p-header-content h1 {
+    color: white;
+}
+
+.bluespier-logo {
+    max-width: 230px;
+}
+.site-branding {
+
+}
+.text-center {
+	text-align: center;
+}

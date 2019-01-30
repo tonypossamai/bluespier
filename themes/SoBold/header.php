@@ -15,6 +15,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Clinical Softwares | Theatre Management | Bluespier</title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
@@ -30,7 +31,9 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-				<!-- Logo goes here -->
+			<section class="bluespier-logo">
+				<img src="<?php echo get_template_directory_uri();?>/images/logo-2.png" class="logo" alt="Bluespier Full Logo">
+			</section>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">

@@ -130,6 +130,7 @@ add_action( 'widgets_init', '_s_widgets_init' );
  */
 function _s_scripts() {
 	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
+	wp_enqueue_style ('font-awesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 // wp_enqueue_style('bootstrap-grid', get_template_directory_uri() . '/bootstrap-grid/bootstrap-grid.min.css', array('_s-style'));
 	// wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -157,6 +158,10 @@ require get_template_directory() . '/inc/sobold-functions.php';
  */
 require get_template_directory() . '/inc/template-tags.php';
 
+function adding_fontawesome(){
+
+}
+
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
@@ -182,3 +187,45 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 
 require get_template_directory() . '/inc/tgm.php';
+
+/**
+ * Register widget area for footer.
+ */
+function tutsplus_widgets_init() {
+ 
+// First Widget Area. Empty by default.
+register_sidebar( array(
+	'name' => __( 'First Widget Area', 'tutsplus' ),
+	'id' => 'first-widget-area',
+	'description' => __( 'The first widget area', 'tutsplus' ),
+	'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="widget-title">',
+	'after_title' => '</h3>',
+) );
+
+// Second Widget Area. Empty by default.
+register_sidebar( array(
+	'name' => __( 'Second Widget Area', 'tutsplus' ),
+	'id' => 'second-widget-area',
+	'description' => __( 'The second widget area', 'tutsplus' ),
+	'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="widget-title">',
+	'after_title' => '</h3>',
+) );
+
+// Third Widget Area. Empty by default.
+register_sidebar( array(
+	'name' => __( 'Third Widget Area', 'tutsplus' ),
+	'id' => 'third-widget-area',
+	'description' => __( 'The third widget area', 'tutsplus' ),
+	'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="widget-title">',
+	'after_title' => '</h3>',
+) );
+}
+
+// Register sidebars by running tutsplus_widgets_init() on the widgets_init hook.
+add_action( 'widgets_init', 'tutsplus_widgets_init' );
