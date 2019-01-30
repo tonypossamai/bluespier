@@ -31,8 +31,8 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<section class="bluespier-logo">
-				<img src="<?php echo get_template_directory_uri();?>/images/logo-2.png" class="logo" alt="Bluespier Full Logo">
+			<section class="logo">
+				<!-- <img src="<?php echo get_template_directory_uri();?>/images/logo-2.png" class="logo" alt="Bluespier Full Logo"> -->
 			</section>
 		</div><!-- .site-branding -->
 
