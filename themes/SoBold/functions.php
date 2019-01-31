@@ -129,7 +129,8 @@ add_action( 'widgets_init', '_s_widgets_init' );
  * Enqueue scripts and styles.
  */
 function _s_scripts() {
-	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
+	//wp_enqueue_style( '_s-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'styles', get_template_directory_uri() . '/build/css/style.min.css' );
 	wp_enqueue_style ('font-awesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 // wp_enqueue_style('bootstrap-grid', get_template_directory_uri() . '/bootstrap-grid/bootstrap-grid.min.css', array('_s-style'));
