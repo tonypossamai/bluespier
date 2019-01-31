@@ -24,37 +24,27 @@ get_header();
 				<div class="subnav-container"></div>
 				<div class="column small-12 logo-navigation">
 
-					<div class="row align-middle">
-						<div class="column small-6 medium-4 large-3">
-							<a href="/">
+					<div class="nav-menu alignment">
+						<div class="main-logo">
+							<a href="https://www.bluespier.com">
 								<img class="e-header-logo" src="<?php echo get_template_directory_uri(); ?>/images/logo-2.png" alt="Bluespier Logo">
 							</a>
 						</div>
 
 						<div class="column p-header-navigation">
 							<div class="row">
-								<div class="column small-12">
+								<div class="tablet-menu desktop-menu column small-12">
 									<?php
 										wp_nav_menu( array(
 										'theme_location' => 'menu-1',
 										'menu_id'        => 'primary-menu',
 									) );
 									?>
-									<!-- <nav>
-										<ul class="menu simple">
-											<li><a href="/">Home</a></li>
-											<li><a href="/about-us">About Us</a></li>
-											<li><a href="/software">Software</a></li>
-											<li><a href="/news">News</a></li>
-											<li><a href="/customer-centre">Customer Centre</a></li>
-											<li><a href="/contact-us">Contact Us</a></li>
-										</ul>
-									</nav> -->
 								</div>
 							</div>
 						</div>	
-						<div class="column small-6 medium-8 hide-for-large align-middle">
-							<a href="#" data-responsive-menu-trigger="" style="float: right; padding: 10px;">
+						<div class="mobile-menu column small-6 medium-8 hide-for-large align-middle">
+							<a href="#" class="data-responsive-menu-trigger" style="float: right; padding: 10px;">
 								<span class="burger-menu"></span>
 							</a>
 						</div>
@@ -91,5 +81,5 @@ get_header();
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	
+
 <?php get_footer();
