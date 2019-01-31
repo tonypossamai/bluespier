@@ -7,11 +7,11 @@
  * @package _s
  */
 
-if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-sidebar-1') ) : 
+if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-sidebar-2') ) : 
 endif; 
 
 ?>
 
-<aside id="primary" class="widget-area">
-	<?php dynamic_sidebar(); ?>
+<aside id="secondary" class="widget-area">
+	<?php dynamic_sidebar( 'secondary' ); ?>
 </aside><!-- #secondary -->

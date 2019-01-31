@@ -122,6 +122,15 @@ function _s_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar Two', '_s' ),
+		'id'            => 'sidebar-2',
+		'description'   => esc_html__( 'Add widgets here.', '_s' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', '_s_widgets_init' );
 
@@ -196,7 +205,7 @@ function tutsplus_widgets_init() {
  
 // First Widget Area. Empty by default.
 register_sidebar( array(
-	'name' => __( 'First Widget Area', 'tutsplus' ),
+	'name' => __( 'footer-sidebar-1', 'tutsplus' ),
 	'id' => 'first-widget-area',
 	'description' => __( 'The first widget area', 'tutsplus' ),
 	'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
@@ -207,7 +216,7 @@ register_sidebar( array(
 
 // Second Widget Area. Empty by default.
 register_sidebar( array(
-	'name' => __( 'Second Widget Area', 'tutsplus' ),
+	'name' => __( 'footer-sidebar-2', 'tutsplus' ),
 	'id' => 'second-widget-area',
 	'description' => __( 'The second widget area', 'tutsplus' ),
 	'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
@@ -218,7 +227,7 @@ register_sidebar( array(
 
 // Third Widget Area. Empty by default.
 register_sidebar( array(
-	'name' => __( 'Third Widget Area', 'tutsplus' ),
+	'name' => __( 'footer-sidebar-3', 'tutsplus' ),
 	'id' => 'third-widget-area',
 	'description' => __( 'The third widget area', 'tutsplus' ),
 	'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
