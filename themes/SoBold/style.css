@@ -1194,3 +1194,10 @@ article {
         min-width: 0; }
         .site-footer .site-info #custom_html-5 .request-demo a .fa-arrow-right {
           display: none; }
+    .site-footer .site-info .p-footer-copyright {
+      margin-top: 40px;
+      padding: 2rem 0 2rem 0;
+      margin: 0 auto;
+      font-size: 0.95em;
+      position: relative;
+      background-color: #3fcfcc; }
