@@ -1170,3 +1170,27 @@ article {
       -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
       transition: background-color 0.25s ease-out, color 0.25s ease-out;
       border: 1px solid transparent; }
+    .site-footer .site-info #custom_html-5 {
+      margin-bottom: 15px;
+      padding: 4rem 0 4rem 0;
+      color: white;
+      background-color: #447cab;
+      background-size: cover;
+      background-position: center;
+      border-radius: 6px;
+      text-align: center; }
+      .site-footer .site-info #custom_html-5 h3 {
+        color: #fff;
+        margin-bottom: 2rem; }
+      .site-footer .site-info #custom_html-5 .request-demo .button {
+        padding: 16px 40px;
+        letter-spacing: 1.6px;
+        border-radius: 50px;
+        font-weight: 400;
+        text-transform: uppercase; }
+      .site-footer .site-info #custom_html-5 .request-demo a {
+        background-color: #3fcfcc;
+        color: #fff;
+        min-width: 0; }
+        .site-footer .site-info #custom_html-5 .request-demo a .fa-arrow-right {
+          display: none; }
