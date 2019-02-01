@@ -99,17 +99,45 @@
 					color: #3fcfcc;
 				}
 			}
-		}
+		}	
+	}
 		.textwidget {
-			.contact-information {
+			.contact-informations>div {
 				font-size: 1.1em;
-				padding-left: 35px;
+				padding-left: 2rem;
 				position: relative;
 				margin-bottom: 15px;
 				overflow-wrap: break-word;
 				color: #ADB9C6;
+
+				i.fas, i.far {
+					position: absolute;
+					top: 3px;
+					left: 0;
+					font-size: 0.9em;
+					color: #40CDFD;
 				}
+			a {
+				color: #ADB9C6;
+				}
+			}	
+			.get-in-touch {
+				display: block;
+				background-color: #447cab;
+				color: #fff;
+				padding: 16px 32px;
+				letter-spacing: 1.6px;
+				border-radius: 50px;
+				font-weight: 400;
+				min-width: 235px;
+				text-transform: uppercase;
+				margin: 1.5rem 0 5rem 0;
+				font-size: 0.9rem;
+				text-align: center;
+				transition: background-color 0.25s ease-out, color 0.25s ease-out;
+				border: 1px solid transparent;
 			}
-		}
+		}				
 	}
 }
+
