@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 body {
-	background: lightblue;
+	background: #fff;
 	font-family: 'Montserrat', sans-serif;
 	padding: 0;
     margin: 0;
@@ -12,20 +12,6 @@ body {
     color: #7F8C92;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-	.p-header-content {
-		p {
-			font-size: 1.4em;
-			max-width: 580px;
-			font-weight: 100;
-			padding: 0 1em 2em 1em;
-			margin: 0 auto;
-		}
-		h1 {
-			color: white;
-			font-size: 1.5rem;
-		}
-	}
 	
 	.p-header {
 		background-repeat: no-repeat;
@@ -34,10 +20,53 @@ body {
 		position: relative;
 		overflow: hidden;
 		box-shadow: 0 0 25px rgba(0,0,0,0.2);
+		z-index: 4;
+
+		.blue-background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #447cab;
+			opacity: 0.9;
+			z-index: -1;
+		}
+		.background-logo {
+			position: absolute;
+			bottom: 0;
+			right: -475px;
+			width: 1050px;
+			height: 390px;
+			background: url(../images/logo-overlay-header.png) no-repeat;
+			background-position: top;
+			background-size: 1050px auto;
+			opacity: 0.02;
+			z-index: 2;
+		}
+		.p-header-content {
+			text-align: center;
+			color: white;
+
+			p {
+				font-size: 1.4rem;
+				max-width: 580px;
+				font-weight: 100;
+				padding: 0 1rem 2rem 1rem;
+				margin: 0 auto;
+			}
+
+			h1 {
+				font-size: 1.5rem;
+				font-weight: 600;
+				padding: 2rem 0 0.5rem 0;
+			}
+		}
 
 		.alignment {
 			align-items: center;
 		}
+		
 		.nav-menu {
 			display: flex;
 			margin-top: 30px;
@@ -46,12 +75,17 @@ body {
 			margin-right: auto;
 			display: -ms-flexbox;
 			display: flex;
-			-ms-flex-flow: row wrap;
-			flex-flow: row wrap;
+			-ms-flex-flow: nowrap;
+			flex-flow: nowrap;
+			align-items: center;
+			justify-content: center;
 	
 			.main-logo {
 				max-width: 180px;
-				margin-left: 1em;
+				margin-left: 1rem;
+			}
+			.tablet-menu {
+				display: none;
 			}
 		}
 		.logo-navigation {
@@ -108,6 +142,95 @@ body {
 						transition-duration: .3s;					
 					}
 				}
+			}
+		}
+	}
+	.tab {
+	display: block;
+    background-color: white;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 4;
+    width: 98%;
+    margin-top: -20px;
+	}
+	article {
+		max-width: 75rem;
+		margin-left: auto;
+		margin-right: auto;
+		display: -ms-flexbox;
+		display: flex;
+		flex-wrap: wrap;
+		-ms-flex-flow: row wrap;
+
+		.entry-content {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			text-align: center;
+
+			h2 {
+				font-size: 1.9rem;
+				font-weight: 600;
+				text-align: center;
+    			text-transform: none;
+    			padding-top: 20px;
+			}
+			iframe {
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				padding: 0 0.5rem;
+			}
+			p {
+				text-align: left;
+			}
+		}
+		// Contact Us Form
+		.wpcf7 {
+			display: flex;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			margin-top: 3rem;
+
+			.wpcf7-form {
+				max-width: 500px;
+				margin-right: auto;
+				margin-left: auto;
+				margin-bottom: 4rem;
+
+				.your-name, .your-email, .your-subject, .your-message {
+					
+					input {
+						color: #666;
+						border: 1px solid #ccc;
+						border-radius: 0.5rem;
+						height: 50px;
+						padding: 1rem;
+						box-shadow: none;
+						outline: none;
+					}
+					textarea {
+						outline: none;
+					}
+				}
+			}
+			.title-icon {
+				display: flex;
+
+				h3 {
+					font-size: 1.125rem;
+					text-transform: uppercase;
+					text-align: left;
+				}
+			.fa-envelope {
+				color: #40CDFD;
+				margin-right: 8px;
+				font-size: 1.2rem;
+				}	
 			}
 		}
 	}

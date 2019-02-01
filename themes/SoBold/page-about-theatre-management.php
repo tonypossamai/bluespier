@@ -19,8 +19,8 @@ get_header();
 		<main id="main" class="site-main">
 
 			<div id="panel-265" class="p-header just-banner" style="background-image: url();">
-				<div class="overlay-blue"></div>
-				<div class="overlay-blue-shape"></div>
+				<div class="blue-background overlay-blue"></div>
+				<div class="background-logo overlay-blue-shape"></div>
 				<div class="subnav-container"></div>
 				<div class="column small-12 logo-navigation">
 
@@ -48,33 +48,24 @@ get_header();
 								<span class="burger-menu"></span>
 							</a>
 						</div>
-					</div>
-				
+					</div>	
 					
-				<div class="row p-header-content align-center">
-					<div class="column small-12 large-8 text-center">
-						<h1><?php $the_page = sanitize_post( $GLOBALS['wp_the_query']->get_queried_object() );
-									$slug = $the_page->post_name;
-						echo strtoupper(str_replace ('-',' ', $slug));
-						?></h1>
-						<p>Integrated, effective theatre management</p>
-					</div>
+				<div class=" page-title p-header-content align-center">		
+					<h1><?php $the_page = sanitize_post( $GLOBALS['wp_the_query']->get_queried_object() );
+								$slug = $the_page->post_name;
+					echo strtoupper(str_replace ('-',' ', $slug));
+					?></h1>
+					<p>Integrated, effective theatre management</p>
 				</div>
 			</div>
 		</div>
-		<div class="thing"></div>
-
+		<div class="tab thing"></div>
 
 			<?php
 			while ( have_posts() ) :
 				the_post();
 
 				get_template_part( 'template-parts/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
 
 			endwhile; // End of the loop.
 			?>
