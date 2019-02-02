@@ -17,9 +17,11 @@
 	<?php _s_post_thumbnail(); ?>
 
 	<div class="entry-content">
-		<?php
-		the_content();
-		?>
+		<div class="content-container">
+			<?php
+			the_content();
+			?>
+		</div>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

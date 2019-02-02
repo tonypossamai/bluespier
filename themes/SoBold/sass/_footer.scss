@@ -8,7 +8,14 @@
 
 	.site-info {
 		min-width: initial;
-					
+		@include tablet {
+			display: flex;
+    		flex-wrap: wrap;
+		}
+		@include desktop {
+			display: flex;
+		}
+		
 	.widget-container {
 		padding-left: .625rem;
 		padding-right: .625rem;
@@ -17,6 +24,13 @@
 			margin-bottom: 35px;
 			font-size: 1.125rem;
 			text-transform: uppercase;
+			font-weight: 600;
+			@include tablet {
+				font-size: 1.4rem;
+			}
+			@include desktop {
+				font-size: 1.5625rem;
+			}
 		}
 		.categories {
 			margin-bottom: 1rem;
@@ -67,7 +81,7 @@
 		.follow-us {
 			font-size: 1.1em;
 			font-weight: 500;
-			margin-bottom: 4rem;
+			margin-bottom: 2rem;
 
 			a {
 				display: inline-block;
@@ -103,9 +117,22 @@
 				}
 			}	
 			.get-in-touch {
-				@include blue-button 
+				@include blue-button;
+				@include tablet {
+					&:hover {
+						background-color: #31c4c1;
+					}
+				@include desktop {
+					&:hover {
+						background-color: #31c4c1;
+					}
+				}
+			}
+			@include desktop {
+				width: 50%;
 			}
 		}
+	}
 		#custom_html-5 {
 			margin: 0 .625rem 4rem .625rem;;
 			padding: 4rem 0;
@@ -115,13 +142,32 @@
 			background-position: center;
 			border-radius: 6px;
 			text-align: center;
+			@include desktop {
+				padding: 2rem 2.9rem;
+			}
 			h3 {
 				color: #fff;
 				margin-bottom: 2rem;
+				@include desktop {
+					font-size: 2rem;
+				}
 			}
 			.request-demo {
+				@include desktop {
+					padding: 50px 35px;
+				}
 				.button {
 					@include call-button;
+					@include tablet {
+						&:hover {
+							background-color: #31c4c1;
+						}
+					}
+					@include desktop {
+						&:hover {
+							    background-color: #31c4c1;
+						}
+					}
 				}
 				a {
 					color: #fff;
@@ -132,7 +178,22 @@
 					}
 				}
 			}
-		}		
+		}
+		#custom_html-3, #custom_html-4 {
+			@include tablet {
+				width: 50%;
+			}
+		}
+		#custom_html-5 {
+			@include tablet {
+				width: 100%;
+			}
+		}
+		#custom_html-3, #custom_html-4, #custom_html-5 {
+			@include desktop {
+				width: 32%;
+			}
+		}					
 	}
 	.p-footer-copyright {
 		margin-top: 40px;
@@ -148,6 +209,7 @@
 			margin-right: auto;
 			padding: 0 2.5rem;
 			max-width: 75rem;
+			justify-content: center;
 
 			.large-6 {
 				margin-bottom: 10px;
@@ -158,10 +220,25 @@
 				}
 			}
 			.links {
+				@include tablet {
+					display: inline-flex;
+					align-items: center;		
+				}
 				a {
 					width: 100%;
 					display: inline-block;
 					opacity: 0.8;
+
+					&:after {
+						@include tablet {
+							content: "";
+							display: inline-block;
+							height: 20px;
+							width: 1px;
+							background-color: #fefefe;
+							margin: 0 15px;
+						}
+					}
 				}
 			}
 		}

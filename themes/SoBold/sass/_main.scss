@@ -11,7 +11,7 @@ height: 60px;
 margin: 0 auto;
 position: relative;
 z-index: 4;
-width: 98%;
+max-width: 1258px;
 margin-top: -20px;
 }
 
@@ -19,7 +19,6 @@ article {
 	max-width: 75rem;
 	margin-left: auto;
 	margin-right: auto;
-	display: -ms-flexbox;
 	display: flex;
 	flex-wrap: wrap;
 	-ms-flex-flow: row wrap;
@@ -29,101 +28,153 @@ article {
 		padding-left: 1rem;
 		padding-right: 1rem;
 		text-align: center;
-
-		h2 {
-			font-size: 1.9rem;
-			font-weight: 600;
-			text-align: center;
-			text-transform: none;
-			padding-top: 20px;
-			margin-bottom: 2rem;
+		@include tablet {
+			padding-left: 1.5rem;
+    		padding-right: 1.5rem;
 		}
-		iframe {
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			padding: 0 0.5rem;
-			@include tablet {
-				height: 70vh;
-			}
-		}
-		p {
-			text-align: left;
-		}
-	}
-	// Contact Us Form
-	.wpcf7 {
-		display: flex;
-		padding-left: 1rem;
-		padding-right: 1rem;
-		margin-top: 3rem;
-
-		.wpcf7-form {
-			max-width: 500px;
-			margin-right: auto;
-			margin-left: auto;
-
-			.wpcf7-list-item {
-				margin: 0;
-			}
-			.wpcf7-submit {
-				@include blue-button
-			}
-
-			label {
-				display: block;
-				font-size: .875rem;
-				font-weight: 300;
-				line-height: 1.8;
-				color: #0a0a0a;
-
-				.acceptance {
-					width: 5px;
-					height: 5px;
-				}
-			}
-
-			input, textarea {
-				color: #666;
-				border: 1px solid #ccc;
-				border-radius: 0.5rem;
-				width: 100%;
-				height: 50px;
-				padding: 1rem;
-				box-shadow: none;
-				outline: none;
-			}
-			textarea {
-				height: 140px;
-			}
-			.privacy {
-				display: block;
-				text-align: left;
-				font-size: .875rem;
-				font-weight: 300;
-				line-height: 1.8;
-				color: #0a0a0a;
-			}
-		}
-		.title-icon {
+		@include desktop {
 			display: flex;
-
-			h3 {
-				font-size: 1.125rem;
-				text-transform: uppercase;
-				text-align: left;
-				@include tablet {
-					font-size: 1.5625rem;
+			max-width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			flex-flow: row wrap;
+		}
+		.content-container {
+			.contant-section {
+				@include desktop {
+					flex: 0 0 66.6666666667%;
+    				max-width: 66.6666666667%;
+				}
+				h2 {
+					font-size: 1.9rem;
+					font-weight: 600;
+					text-align: center;
+					text-transform: none;
+					padding-top: 20px;
+					margin-bottom: 2rem;
+				}
+				iframe {
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					padding: 0 0.5rem;
+					@include tablet {
+						height: 70vh;
+					}
+				}
+				p {
+					text-align: left;
 				}
 			}
-		.fa-envelope {
-			color: #40CDFD;
-			margin-right: 8px;
-			font-size: 1.2rem;
-			}	
+
+		}
+		// Contact Us Form
+		.form-container {
+			@include desktop {
+				flex: 0 0 33.3333333333%;
+				max-width: 33.3333333333%;
+			}
+			.wpcf7 {
+				display: flex;
+				padding-left: 1rem;
+				padding-right: 1rem;
+				margin-top: 3rem;
+		
+				.wpcf7-form {
+					max-width: 500px;
+					margin-right: auto;
+					margin-left: auto;
+					@include desktop {
+						width: 30%;
+					}
+		
+					.title-icon {
+						.fa-envelope {
+							@include desktop {
+								display: none;
+							}
+						}
+					}
+		
+					.wpcf7-list-item {
+						margin: 0;
+					}
+					.wpcf7-submit {
+						@include blue-button;
+						@include tablet {
+							&:hover {
+								background-color: #31c4c1;
+							}
+						}
+						@include desktop {
+							&:hover {
+								background-color: #31c4c1;
+							}
+						}
+					}
+		
+					label {
+						display: block;
+						font-size: .875rem;
+						font-weight: 300;
+						line-height: 1.8;
+						color: #0a0a0a;
+		
+						.acceptance {
+							width: 5px;
+							height: 5px;
+						}
+					}
+		
+					input, textarea {
+						color: #666;
+						border: 1px solid #e6e6e6;
+						border-radius: 0.5rem;
+						width: 100%;
+						height: 50px;
+						padding: 1rem;
+						box-shadow: none;
+						outline: none;
+					}
+					textarea {
+						height: 140px;
+					}
+					.privacy {
+						display: block;
+						text-align: left;
+						font-size: .875rem;
+						font-weight: 300;
+						line-height: 1.8;
+						color: #0a0a0a;
+					}
+				}
+				.title-icon {
+					display: flex;
+		
+					h3 {
+						font-size: 1.125rem;
+						text-transform: uppercase;
+						text-align: left;
+						font-weight: 600;
+						@include tablet {
+							font-size: 1.4rem;
+						}
+						@include desktop {
+							font-size: 1.5625rem;
+						}
+					}
+				.fa-envelope {
+					color: #40CDFD;
+					margin-right: 8px;
+					font-size: 1.2rem;
+					}	
+				}
+			}
 		}
 	}
 }
+		
 
 

@@ -19,8 +19,14 @@ textarea {
 	border-radius: 3px;
 	padding: 3px;
 
-	&:focus {
-		color: none;
+	&:focus  {
+		color: transparent;
+	}
+	&:focus::-webkit-input-placeholder {
+		color: transparent;
+	}
+	&:focus:-moz-placeholder { 
+		color:transparent; 
 	}
 }
 
