@@ -7,8 +7,6 @@
 	padding-top: 85px;
 
 	.site-info {
-		padding-left: .625rem;
-    	padding-right: .625rem;
 		min-width: initial;
 					
 	.widget-container {
@@ -26,23 +24,7 @@
 			flex-direction: column;
 
 			a {
-				transition: color .2s;
-				background-color: transparent;
-				border: 1px solid #E6E6E6;
-				border-radius: 4rem;
-				color: #ADB9C6;
-				padding: 1em 0 1em 0; 
-				text-transform: none;
-				font-size: 1.1em;
-				letter-spacing: 0;
-				font-weight: 300;
-				position: relative;
-				padding-left: 50px;
-				width: 100%;
-				max-width: 340px;
-				text-align: left;
-				line-height: 1.3em;
-				margin-bottom: 11px;
+				@include product-button;
 				&:before {
 					content: "";
 					background-repeat: no-repeat;
@@ -57,23 +39,23 @@
 			}
 			.claimsure {
 				&:before {
-					background-image: url(../images/icon-claimsure.png);
+					background-image: url(../../images/icon-claimsure.png);
 				}
 			}
 			.billsure {
 				&:before {
-					background-image: url(../images/icon-billsure.png);
+					background-image: url(../../images/icon-billsure.png);
 				}
 			}
 			.hospitals {
 				&:before {
-					background-image: url(../images/icon-claimsure.png);
-				}
-			.consulting {
-				&:before {
-					background-image: url(../images/icon-claimsure-services.png);
+					background-image: url(../../images/icon-claimsure.png);
 				}
 			}
+			.consulting {
+				&:before {
+					background-image: url(../../images/icon-claimsure-services.png);
+				}
 			}
 			.button {
 				padding: 1em 1em 1em 3em;
@@ -121,25 +103,12 @@
 				}
 			}	
 			.get-in-touch {
-				display: block;
-				background-color: #447cab;
-				color: #fff;
-				padding: 16px 32px;
-				letter-spacing: 1.6px;
-				border-radius: 50px;
-				font-weight: 400;
-				min-width: 235px;
-				text-transform: uppercase;
-				margin: 1.5rem 0 5rem 0;
-				font-size: 0.9rem;
-				text-align: center;
-				transition: background-color 0.25s ease-out, color 0.25s ease-out;
-				border: 1px solid transparent;
+				@include blue-button 
 			}
 		}
 		#custom_html-5 {
-			margin-bottom: 15px;
-			padding: 4rem 0 4rem 0;
+			margin: 0 .625rem 4rem .625rem;;
+			padding: 4rem 0;
 			color: white;
 			background-color: #447cab;
 			background-size: cover;
@@ -152,14 +121,9 @@
 			}
 			.request-demo {
 				.button {
-					padding: 16px 40px;
-    				letter-spacing: 1.6px;
-    				border-radius: 50px;
-					font-weight: 400;
-					text-transform: uppercase;
+					@include call-button;
 				}
 				a {
-					background-color: #3fcfcc;
 					color: #fff;
 					min-width: 0;
 
@@ -171,11 +135,36 @@
 		}
 		.p-footer-copyright {
 			margin-top: 40px;
-			padding: 2rem 0 2rem 0;
+			padding: 2rem 0 1rem 0;
 			margin: 0 auto;
 			font-size: 0.95em;
 			position: relative;
 			background-color: #3fcfcc;
+
+			.row {
+				display: flex;
+				flex-flow: row wrap;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 0 2.5rem;
+				max-width: 75rem;
+
+				.large-6 {
+					margin-bottom: 10px;
+					text-align: center!important;
+					
+					span, a {
+						color: #fff;
+					}
+				}
+				.links {
+					a {
+						width: 100%;
+						display: inline-block;
+						opacity: 0.8;
+					}
+				}
+			}
 		}			
 	}
 }

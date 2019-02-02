@@ -4,13 +4,13 @@ body {
 	padding: 0;
     margin: 0;
     font-weight: 400;
-    line-height: 1.5;
+    // line-height: 1.5;
     color: #7F8C92;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-$font__main: sans-serif;
+$font__main: 'Montserrat', sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;

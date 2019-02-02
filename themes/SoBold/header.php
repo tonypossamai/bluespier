@@ -34,11 +34,61 @@
 		<div class="site-branding">
 			<section class="logo">
 				<!-- <img src="<?php echo get_template_directory_uri();?>/images/logo-2.png" class="logo" alt="Bluespier Full Logo"> -->
+				<div class="nav-menu alignment">
+					<div class="main-logo">
+						<a href="https://www.bluespier.com">
+						<img class="e-header-logo" src="<?php echo get_template_directory_uri(); ?>/images/logo-2.png" alt="Bluespier Logo">
+						</a>
+					</div>
+					<div id="burger-wrap">
+             			<a class="burger"><span></span></a>
+           			</div>
+				</div>
 			</section>
 		</div><!-- .site-branding -->
+		<div class="column small-12 logo-navigation">
 
-		<nav id="site-navigation" class="main-navigation">
+			
+		</div>	
+		<!-- <nav id="site-navigation" class="top-nav open main-navigation">
+			<div class="column nav-menu p-header-navigation">
+				<div class="row">
+					<div class="tablet-menu menu-list list-open desktop-menu column small-12">
 
+					</div>
+					<div id="burger-wrap" class="mobile-menu column small-6 medium-8 hide-for-large align-middle">
+						<a href="#" class="burger data-responsive-menu-trigger">
+							<span class="burger-menu"></span>
+						</a>
+					</div> -->
+					<!-- burger menu -->
+					
+					
+
+	<div id="top-nav">
+		<div class="nav-menu">
+			<div class="menu-list">
+
+				<?php
+					wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
+				?>
+
+			</div>
+
+       </div> 
+   </div>
+
+
+
+
+
+
+
+				</div>
+			</div>	
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

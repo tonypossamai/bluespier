@@ -22,38 +22,13 @@ get_header();
 				<div class="blue-background overlay-blue"></div>
 				<div class="background-logo overlay-blue-shape"></div>
 				<div class="subnav-container"></div>
-				<div class="column small-12 logo-navigation">
-
-					<div class="nav-menu alignment">
-						<div class="main-logo">
-							<a href="https://www.bluespier.com">
-								<img class="e-header-logo" src="<?php echo get_template_directory_uri(); ?>/images/logo-2.png" alt="Bluespier Logo">
-							</a>
-						</div>
-
-						<div class="column p-header-navigation">
-							<div class="row">
-								<div class="tablet-menu desktop-menu column small-12">
-									<?php
-										wp_nav_menu( array(
-										'theme_location' => 'menu-1',
-										'menu_id'        => 'primary-menu',
-									) );
-									?>
-								</div>
-							</div>
-						</div>	
-						<div class="mobile-menu column small-6 medium-8 hide-for-large align-middle">
-							<a href="#" class="data-responsive-menu-trigger" style="float: right; padding: 10px;">
-								<span class="burger-menu"></span>
-							</a>
-						</div>
-					</div>	
+				
 					
 				<div class=" page-title p-header-content align-center">		
 					<h1><?php $the_page = sanitize_post( $GLOBALS['wp_the_query']->get_queried_object() );
 								$slug = $the_page->post_name;
-					echo strtoupper(str_replace ('-',' ', $slug));
+					echo substr(strtoupper(str_replace ('-',' ', $slug)), 6);
+					
 					?></h1>
 					<p>Integrated, effective theatre management</p>
 				</div>
