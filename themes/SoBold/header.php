@@ -46,46 +46,19 @@
 				</div>
 			</section>
 		</div><!-- .site-branding -->
-		<div class="column small-12 logo-navigation">
-
-			
-		</div>	
-		<!-- <nav id="site-navigation" class="top-nav open main-navigation">
-			<div class="column nav-menu p-header-navigation">
-				<div class="row">
-					<div class="tablet-menu menu-list list-open desktop-menu column small-12">
-
-					</div>
-					<div id="burger-wrap" class="mobile-menu column small-6 medium-8 hide-for-large align-middle">
-						<a href="#" class="burger data-responsive-menu-trigger">
-							<span class="burger-menu"></span>
-						</a>
-					</div> -->
-					<!-- burger menu -->
-					
-					
-
-	<div id="top-nav">
-		<div class="nav-menu">
-			<div class="menu-list">
-
-				<?php
-					wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-				?>
-
-			</div>
-
-       </div> 
-   </div>
-
-
-
-
-
-
+		
+		<div id="top-nav">
+			<div class="nav-menu">
+				<div class="menu-list">
+					<?php
+						wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					) );
+					?>
+				</div>
+			</div> 
+		</div>
 
 				</div>
 			</div>	

@@ -22,6 +22,8 @@
 <?php get_sidebar('secondary');?>
 <?php get_sidebar('third');?>
 
+
+		</div><!-- .site-info -->
 		<div class="p-footer-copyright">
 			<div class="row">
 				<div class="column small-12 medium-12 large-6">
@@ -36,8 +38,6 @@
 				</div>
 			</div>
 		</div>
-
-		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

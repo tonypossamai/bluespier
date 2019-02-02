@@ -2,7 +2,7 @@
 # Footer
 --------------------------------------------------------------*/
 
-.site-footer {
+#colophon {
 	border-top: 1px solid #E6E6E6;
 	padding-top: 85px;
 
@@ -132,40 +132,40 @@
 					}
 				}
 			}
-		}
-		.p-footer-copyright {
-			margin-top: 40px;
-			padding: 2rem 0 1rem 0;
-			margin: 0 auto;
-			font-size: 0.95em;
-			position: relative;
-			background-color: #3fcfcc;
+		}		
+	}
+	.p-footer-copyright {
+		margin-top: 40px;
+		padding: 2rem 0 1rem 0;
+		margin: 0 auto;
+		font-size: 0.95em;
+		background-color: #3fcfcc;
 
-			.row {
-				display: flex;
-				flex-flow: row wrap;
-				margin-left: auto;
-				margin-right: auto;
-				padding: 0 2.5rem;
-				max-width: 75rem;
+		.row {
+			display: flex;
+			flex-flow: row wrap;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 0 2.5rem;
+			max-width: 75rem;
 
-				.large-6 {
-					margin-bottom: 10px;
-					text-align: center!important;
-					
-					span, a {
-						color: #fff;
-					}
-				}
-				.links {
-					a {
-						width: 100%;
-						display: inline-block;
-						opacity: 0.8;
-					}
+			.large-6 {
+				margin-bottom: 10px;
+				text-align: center!important;
+				
+				span, a {
+					color: #fff;
 				}
 			}
-		}			
+			.links {
+				a {
+					width: 100%;
+					display: inline-block;
+					opacity: 0.8;
+				}
+			}
+		}
 	}
-}
+}	
+
 
