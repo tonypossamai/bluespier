@@ -4,16 +4,19 @@
 
 #colophon {
 	border-top: 1px solid #E6E6E6;
-	padding-top: 85px;
+	padding-top: 2rem;
+	margin-top: 2rem;
 
 	.site-info {
-		min-width: initial;
+		padding-top: 50px;
 		@include tablet {
 			display: flex;
     		flex-wrap: wrap;
 		}
 		@include desktop {
 			display: flex;
+			max-width: 1200px;
+			margin: auto;
 		}
 		
 	.widget-container {
@@ -143,7 +146,11 @@
 			border-radius: 6px;
 			text-align: center;
 			@include desktop {
-				padding: 2rem 2.9rem;
+				height: 15rem;
+				padding: 1rem 2.9rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
 			}
 			h3 {
 				color: #fff;
@@ -154,7 +161,7 @@
 			}
 			.request-demo {
 				@include desktop {
-					padding: 50px 35px;
+					padding: 50px -1px;
 				}
 				.button {
 					@include call-button;
