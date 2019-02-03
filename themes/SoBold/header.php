@@ -31,37 +31,35 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
 	<header id="masthead" class="site-header">
+
 		<div class="site-branding">
 			<section class="logo">
-				<!-- <img src="<?php echo get_template_directory_uri();?>/images/logo-2.png" class="logo" alt="Bluespier Full Logo"> -->
 				<div class="nav-menu alignment">
+
 					<div class="main-logo">
 						<a href="https://www.bluespier.com">
 						<img class="e-header-logo" src="<?php echo get_template_directory_uri(); ?>/images/logo-2.png" alt="Bluespier Logo">
 						</a>
 					</div>
+
+					<div class="menu-list">
+						<?php
+							wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						) );
+						?>
+					</div>
+	
 					<div id="burger-wrap">
              			<a class="burger"><span></span></a>
-           			</div>
+					</div>
+					   
 				</div>
 			</section>
 		</div><!-- .site-branding -->
 		
-		<div id="top-nav">
-			<div class="nav-menu">
-				<div class="menu-list">
-					<?php
-						wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					) );
-					?>
-				</div>
-			</div> 
-		</div>
-
-				</div>
-			</div>	
+		
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
