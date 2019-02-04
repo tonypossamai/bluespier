@@ -961,8 +961,7 @@ article {
     text-align: center; }
     @media (min-width: 620px) {
       article .entry-content {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem; } }
+        padding: 0 1.5rem; } }
     @media (min-width: 1020px) {
       article .entry-content {
         display: -webkit-box;
@@ -991,18 +990,20 @@ article {
       text-transform: none;
       padding-top: 20px;
       margin-bottom: 2rem; }
+    article .entry-content .content-container .content-section p {
+      padding-left: 0.6rem; }
     article .entry-content .content-container .content-section iframe {
       top: 0;
       left: 0;
       width: 100%;
-      height: 55vh;
+      height: 300px;
       padding: 0 0.5rem; }
       @media (min-width: 620px) {
         article .entry-content .content-container .content-section iframe {
-          height: 85vh; } }
+          height: 55vh; } }
       @media (min-width: 1020px) {
         article .entry-content .content-container .content-section iframe {
-          height: 65vh; } }
+          height: 60vh; } }
     article .entry-content .content-container .content-section p {
       text-align: left; }
     @media (min-width: 1020px) {
@@ -1116,7 +1117,9 @@ article {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap; } }
+            flex-wrap: wrap;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem; } }
     @media (min-width: 1020px) {
       #colophon .site-info {
         display: -webkit-box;
@@ -1237,10 +1240,6 @@ article {
       @media (min-width: 620px) {
         #colophon .site-info .textwidget .get-in-touch:hover {
           background-color: #31c4c1; } }
-
-@media (min-width: 620px) and (min-width: 1020px) {
-  #colophon .site-info .textwidget .get-in-touch:hover {
-    background-color: #31c4c1; } }
       @media (min-width: 1020px) {
         #colophon .site-info .textwidget .get-in-touch {
           width: 50%; } }
@@ -1257,6 +1256,7 @@ article {
         #colophon .site-info #custom_html-5 {
           height: 15rem;
           padding: 1rem 2.9rem;
+          margin-left: 1.8rem;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -1286,9 +1286,6 @@ article {
         @media (min-width: 620px) {
           #colophon .site-info #custom_html-5 .request-demo .button:hover {
             background-color: #31c4c1; } }
-        @media (min-width: 1020px) {
-          #colophon .site-info #custom_html-5 .request-demo .button:hover {
-            background-color: #31c4c1; } }
       #colophon .site-info #custom_html-5 .request-demo a {
         color: #fff;
         min-width: 0; }
@@ -1304,9 +1301,8 @@ article {
       #colophon .site-info #custom_html-3, #colophon .site-info #custom_html-4, #colophon .site-info #custom_html-5 {
         width: 32%; } }
   #colophon .p-footer-copyright {
-    margin-top: 40px;
     padding: 2rem 0 1rem 0;
-    margin: 0 auto;
+    position: relative;
     font-size: 0.95em;
     background-color: #3fcfcc; }
     #colophon .p-footer-copyright .row {
@@ -1324,31 +1320,38 @@ article {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
+      @media (min-width: 1020px) {
+        #colophon .p-footer-copyright .row {
+          padding: 0; } }
       #colophon .p-footer-copyright .row .large-6 {
         margin-bottom: 10px;
         text-align: center !important; }
+        @media (min-width: 1020px) {
+          #colophon .p-footer-copyright .row .large-6 {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            width: 50%; } }
         #colophon .p-footer-copyright .row .large-6 span, #colophon .p-footer-copyright .row .large-6 a {
           color: #fff; }
-      @media (min-width: 620px) {
-        #colophon .p-footer-copyright .row .links {
-          display: -webkit-inline-box;
-          display: -ms-inline-flexbox;
-          display: inline-flex;
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center; } }
       #colophon .p-footer-copyright .row .links a {
         width: 100%;
         display: inline-block;
         opacity: 0.8; }
         @media (min-width: 620px) {
+          #colophon .p-footer-copyright .row .links a {
+            width: auto; } }
+        @media (min-width: 620px) {
           #colophon .p-footer-copyright .row .links a:after {
             content: "";
             display: inline-block;
+            vertical-align: top;
             height: 20px;
             width: 1px;
             background-color: #fefefe;
             margin: 0 15px; } }
+        #colophon .p-footer-copyright .row .links a:last-child:after {
+          content: none; }
 
 /*--------------------------------------------------------------
 # Header

@@ -11,7 +11,9 @@
 		padding-top: 50px;
 		@include tablet {
 			display: flex;
-    		flex-wrap: wrap;
+			flex-wrap: wrap;
+			padding-left: 1.5rem;
+			padding-right: 1.5rem; 
 		}
 		@include desktop {
 			display: flex;
@@ -125,11 +127,6 @@
 					&:hover {
 						background-color: #31c4c1;
 					}
-				@include desktop {
-					&:hover {
-						background-color: #31c4c1;
-					}
-				}
 			}
 			@include desktop {
 				width: 50%;
@@ -137,7 +134,7 @@
 		}
 	}
 		#custom_html-5 {
-			margin: 0 .625rem 4rem .625rem;;
+			margin: 0 .625rem 4rem .625rem;
 			padding: 4rem 0;
 			color: white;
 			background-color: #447cab;
@@ -148,6 +145,7 @@
 			@include desktop {
 				height: 15rem;
 				padding: 1rem 2.9rem;
+				margin-left: 1.8rem;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -168,11 +166,6 @@
 					@include tablet {
 						&:hover {
 							background-color: #31c4c1;
-						}
-					}
-					@include desktop {
-						&:hover {
-							    background-color: #31c4c1;
 						}
 					}
 				}
@@ -203,9 +196,9 @@
 		}					
 	}
 	.p-footer-copyright {
-		margin-top: 40px;
+		
 		padding: 2rem 0 1rem 0;
-		margin: 0 auto;
+		position: relative;
 		font-size: 0.95em;
 		background-color: #3fcfcc;
 
@@ -217,34 +210,46 @@
 			padding: 0 2.5rem;
 			max-width: 75rem;
 			justify-content: center;
+			@include desktop {
+				padding: 0;
+			}
 
 			.large-6 {
 				margin-bottom: 10px;
 				text-align: center!important;
+				@include desktop {
+					display: flex;
+					width: 50%;
+				}
 				
 				span, a {
 					color: #fff;
 				}
 			}
+
 			.links {
-				@include tablet {
-					display: inline-flex;
-					align-items: center;		
-				}
+
 				a {
 					width: 100%;
 					display: inline-block;
 					opacity: 0.8;
+					@include tablet {
+						width: auto;
+					}
 
 					&:after {
 						@include tablet {
 							content: "";
 							display: inline-block;
+							vertical-align: top;
 							height: 20px;
 							width: 1px;
 							background-color: #fefefe;
 							margin: 0 15px;
 						}
+					}
+					&:last-child:after {
+						content: none;
 					}
 				}
 			}

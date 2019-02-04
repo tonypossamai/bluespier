@@ -28,7 +28,7 @@
 			<div class="row">
 				<div class="column small-12 medium-12 large-6">
 					<span>© Copyright Bluespier 2019.</span>
-					<a href="https://sobold.com/" target="_blank">Web Management by SoBold</a>
+					<a href="https://sobold.co.uk" target="_blank">Web Management by SoBold</a>
 				</div>
 				<div class="column small-12 medium-12 large-6 text-right links">
 					<a href="https://www.clanwilliamgroup.com/" target="_blank">Clanwilliam Group</a>
