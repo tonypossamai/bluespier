@@ -32,8 +32,8 @@
 
 	<header id="masthead" class="site-header">
 
-		<div class="site-branding">
-			<section class="logo">
+		<div class="site-branding logo">
+			<!-- <section class=""> -->
 				<div class="nav-menu alignment">
 
 					<div class="main-logo">
@@ -42,22 +42,45 @@
 						</a>
 					</div>
 
-					<div class="menu-list">
-						<?php
-							wp_nav_menu( array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-						) );
-						?>
+					<div id="top-nav">
+						<div>
+							<div class="menu-list">
+								<?php
+									wp_nav_menu( array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu',
+								) );
+								?>
+							</div>
+						</div> 
 					</div>
-	
+
 					<div id="burger-wrap">
              			<a class="burger"><span></span></a>
 					</div>
 					   
 				</div>
-			</section>
+			<!-- </section> -->
 		</div><!-- .site-branding -->
+
+<div class="button_container" id="toggle">
+	<span class="top"></span>
+	<span class="middle"></span>
+	<span class="bottom"></span>
+</div>
+
+<div class="overlay" id="overlay">
+	<nav class="overlay-menu">
+		<?php
+			wp_nav_menu( array(
+			'theme_location' => 'menu-1',
+			'menu_id'        => 'primary-menu',
+		) );
+		?>
+	</nav>
+</div>
+
+
 		
 		
 		</nav><!-- #site-navigation -->

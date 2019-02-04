@@ -208,10 +208,9 @@
 			margin-left: auto;
 			margin-right: auto;
 			padding: 0 2.5rem;
-			max-width: 75rem;
 			justify-content: center;
 			@include desktop {
-				padding: 0;
+				justify-content: space-between;
 			}
 
 			.large-6 {
@@ -219,7 +218,6 @@
 				text-align: center!important;
 				@include desktop {
 					display: flex;
-					width: 50%;
 				}
 				
 				span, a {
